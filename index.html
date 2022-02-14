@@ -1,33 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | NFT preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Equilibrium #3429
-
-  Our Equilibrium collection promotes balance and calm.
-
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <title>Frontend Mentor | NFT preview card component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/app.css" />
+  </head>
+  <body>
+    <main>
+      <article class="card">
+        <header>
+          <div class="poster">
+            <img src="./images/image-equilibrium.jpg" alt="nft logo" class="img fluid" />
+          </div>
+          <h1 class="title">Equilibrium #3429</h1>
+        </header>
+        <section class="content">
+          <p>Our Equilibrium collection promotes balance and calm.</p>
+          <div class="stats">
+            <span class="tile amount">
+              <img src="./images/icon-ethereum.svg" alt="Ethereum icon" />
+              <span>0.041 ETH</span>
+            </span>
+            <span class="tile time-left">
+              <img src="./images/icon-clock.svg" alt="Clock icon" />
+              <span>3 days left</span>
+            </span>
+          </div>
+        </section>
+        <footer class="footer">
+          <div class="avatar">
+            <img src="./images/image-avatar.png" alt="Avatar of Jules Wyvern" class="img fluid" />
+          </div>
+          <p class="user-info">
+            Creation of <span class="name">Jules Wyvern</span>
+          </p>
+        </footer>
+      </article>
+    </main>
+  </body>
 </html>

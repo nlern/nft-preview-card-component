@@ -1,0 +1,130 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue1: hsl(217, 54%, 11%);
+  --very-dark-blue2: hsl(216, 50%, 16%);
+  --very-dark-blue3: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --primary: var(--soft-blue);
+  --secondary: var(--cyan);
+  --main-bg: var(--very-dark-blue1);
+  --card-bg: var(--very-dark-blue2);
+  --line: var(--very-dark-blue3);
+  --color: var(--white);
+  --font-weight-body: 400;
+  --font-weight-header: 600;
+  --font-size-header: 1.25rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  background: var(--main-bg);
+  color: var(--color);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img.fluid {
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  margin: 1.2em;
+  border-radius: 0.8em;
+  background: var(--card-bg);
+  padding: 1.2em;
+  width: 375px;
+}
+
+.card .poster {
+  width: 100%;
+  height: auto;
+}
+
+.card .poster .img {
+  border-radius: 0.5em;
+}
+
+.card .poster:hover {
+  cursor: pointer;
+}
+
+.card .title,
+.card .content,
+.card .footer {
+  margin-top: 1em;
+}
+
+.card .title {
+  font-size: var(--font-size-header);
+  font-weight: var(--font-weight-header);
+}
+
+.card .content p {
+  color: var(--primary);
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+.card .content .stats {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .content .stats .tile {
+  display: flex;
+  align-items: center;
+}
+
+.card .content .stats .tile img {
+  margin-right: 0.25em;
+}
+
+.card .content .stats .amount {
+  color: var(--secondary);
+}
+
+.card .content .stats .time-left {
+  color: var(--primary);
+}
+
+.card .footer {
+  border-top: 1px solid var(--line);
+  padding-top: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card .footer .avatar {
+  height: 32px;
+  width: 32px;
+  border: 1px solid var(--white);
+  border-radius: 50px;
+  margin-right: 1em;
+}
+
+.card .footer .user-info {
+  color: var(--primary);
+}
+
+.card .footer .user-info > .name {
+  color: var(--white);
+  font-weight: 300;
+}
