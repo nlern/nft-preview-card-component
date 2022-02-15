@@ -1,12 +1,14 @@
 :root {
   --soft-blue: hsl(215, 51%, 70%);
   --cyan: hsl(178, 100%, 50%);
+  --cyan-transparent: hsla(178, 100%, 50%, 0.5);
   --very-dark-blue1: hsl(217, 54%, 11%);
   --very-dark-blue2: hsl(216, 50%, 16%);
   --very-dark-blue3: hsl(215, 32%, 27%);
   --white: hsl(0, 0%, 100%);
   --primary: var(--soft-blue);
   --secondary: var(--cyan);
+  --secondary-transparent: var(--cyan-transparent);
   --main-bg: var(--very-dark-blue1);
   --card-bg: var(--very-dark-blue2);
   --line: var(--very-dark-blue3);
@@ -43,24 +45,48 @@ main {
 }
 
 .card {
-  margin: 1.2em;
+  margin: 1em;
   border-radius: 0.8em;
   background: var(--card-bg);
   padding: 1.2em;
-  width: 375px;
+  width: 350px;
 }
 
 .card .poster {
-  width: 100%;
-  height: auto;
+  position: relative;
 }
 
 .card .poster .img {
+  width: 100%;
+  height: auto;
   border-radius: 0.5em;
+  object-fit: cover;
+}
+
+.card .poster .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: calc(100% - 5px);
+  width: 100%;
+  opacity: 0;
+  background-color: var(--secondary-transparent);
+  transition: opacity .5s ease;
+  border-radius: 0.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card .poster:hover {
   cursor: pointer;
+}
+
+.card .poster:hover .overlay {
+  opacity: 1;
 }
 
 .card .title,
