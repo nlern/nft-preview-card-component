@@ -37,6 +37,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1em;
 }
 
 .img.fluid {
@@ -45,7 +46,6 @@ main {
 }
 
 .card {
-  margin: 1em;
   border-radius: 0.8em;
   background: var(--card-bg);
   padding: 1.2em;
@@ -153,4 +153,11 @@ main {
 .card .footer .user-info > .name {
   color: var(--white);
   font-weight: 300;
+}
+
+@media screen and (min-width:768px) {
+  main {
+    padding: 0;
+  }
+
 }
