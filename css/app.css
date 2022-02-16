@@ -41,6 +41,7 @@ main {
 }
 
 .img.fluid {
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -69,7 +70,7 @@ main {
   bottom: 0;
   left: 0;
   right: 0;
-  height: calc(100% - 5px);
+  height: 100%;
   width: 100%;
   opacity: 0;
   background-color: var(--secondary-transparent);
